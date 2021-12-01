@@ -11,7 +11,7 @@ namespace RegexUserRegistration
             while (flag)
             {
                 Console.WriteLine("Welcome to the User Registration validation program");
-                Console.WriteLine("Enter the validation to be executed : \n 1. First Name \n 2. LastName\n 3.Email\n 4.Mobile Number\n 5.Exit");
+                Console.WriteLine("Enter the validation to be executed : \n 1. First Name \n 2. LastName\n 3.Email\n 4.Mobile Number\n 5.Password1\n 6.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -28,6 +28,9 @@ namespace RegexUserRegistration
                         Console.WriteLine(validation.ValidateMobileNumber("91 7905142214"));
                         break;
                     case 5:
+                        Console.WriteLine(validation.ValidatePassword1("aniruddh"));
+                        break;
+                    case 6:
                         flag = false;
                         break;
                 }
