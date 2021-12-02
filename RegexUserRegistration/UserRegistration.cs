@@ -11,9 +11,9 @@ namespace RegexUserRegistration
         public static string REGEX_LAST_NAME = "[A-Z]{1}[a-z]{2,}$";
         public static string REGEX_EMAIL = "^[a-z]{3,}[.][a-z]{3,}[@][a-z]{2,}[.][a-z]{2}[.][a-z]{2}$";
         public static string REGEX_MOBILE = "^[1,9]{2} [6-9]{1}[0-9]{9}$";
-        public static string REGEX_PASSWORD_1 = "^[a-z]{8,}$";
-        public static string REGEX_PASSWORD_2 = "^[A-Z]{1}[a-z]{7,}$";
-        public static string REGEX_PASSWORD_3 = "[A-Z]{1}[a-z]{7,}[0-9]{1,}$";
+        public static string REGEX_PASSWORD_1 = "^(?=.{8,})";
+        public static string REGEX_PASSWORD_2 = "^(?=.{8,})(?=.*[A-Z])";
+        public static string REGEX_PASSWORD_3 = "^(?=.{8,})(?=.*[A-Z])(?=.*[0-9])";
         public bool ValidateFirstName(string firstName)
         {
             return Regex.IsMatch(firstName, REGEX_FIRST_NAME);
